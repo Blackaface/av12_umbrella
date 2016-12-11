@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>傘傘愛</title>
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="開始啟用傘傘愛">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://ding-wen.alphastudio.io/">
+    <meta property="og:image" content="https://www.writtenchinese.com/wp-content/uploads/2014/09/Heart-Love-Sky-Hands-Silhouette__1920x1200.jpg">
+    <meta property="og:description" content="傘傘愛是個公共雨傘租借系統，不再擔心突然的降雨。">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="vendor/device-mockups/device-mockups.min.css">
+
+    <!-- css media type-->
+    <link href="/css/phone.css" rel="stylesheet" type="text/css"media="only screen and (min-width: 0px) and (max-width: 320px)" />
+    <link href="/css/tablet.css" rel="stylesheet" type="text/css"media="only screen and (min-width: 321px) and (max-width: 768px)" />
+    <link href="/css/desktop.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- Theme CSS -->
+    <link href="css/new-age.min.css" rel="stylesheet">
+
+    <!-- Facebook Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1712651812389714');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+        fbq('track', 'CompleteRegistration');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1712651812389714&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- DO NOT MODIFY -->
+        <!-- End Facebook Pixel Code -->
+        <!-- GA started -->
+         <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+             ga('create', 'UA-87093034-1', 'auto');
+             ga('require', 'displayfeatures');
+             ga('send', 'pageview');
+        </script>
+        <script>
+        var videos = document.getElementsByTagName("video"),
+        
+        fraction = 0.8;
+        function checkScroll() {
+
+                var video = $('#video1');
+                var playvideo = videos[0];
+                //音量大小控制
+                playvideo.volume = 0.2;
+                var offset = video.offset();
+                //iphone6 手機螢幕長度
+                var screen_length = $(".screen").height()
+                //iphone6 手機螢幕至網頁最上頭
+                var screen_offsetTop = $(".screen").offset().top
+
+                var y = offset.top, h = video.height(),
+                    sl = screen_length , so = screen_offsetTop,
+                    end = y + h,
+                    deviation = window.innerHeight*(2/3);
+                    console.log(window.pageYOffset);
+                    if (window.pageYOffset > so-deviation && window.pageYOffset < end) {
+                        playvideo.play();
+                    } else {
+                        playvideo.pause();
+                    }
+        }
+        window.addEventListener('scroll', checkScroll, false);
+        window.addEventListener('resize', checkScroll, false);
+        </script>
+        <!-- END GA -->
+        
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">傘傘愛 罩著您</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#download">傘傘愛-公共連署提案</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#features">about傘傘愛</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">支持連署</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <h1>傘傘愛 <br>-公共雨傘租借系統。
+                            </h1>
+                            <p>我們是雨傘界的Ubike，讓你雨天也能有把傘。
+                                <br> 簡易申請，輕鬆租借，每次只要5元！
+                            </p>
+                            <a class="btn btn-outline btn-xl page-scroll">想知道更多傘傘愛</a>
+                            <h2 class="section-heading">不穩定的氣候你濕透了嗎？<br>不用擔心，有了傘傘愛你不再成為落湯雞！</h2>
+                            
+                        </div>                  
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>申請簡單，租借方便，而且每次只要5元！</h2>
+                        <p class="text-muted">現在開始免費下載，我們提供最簡易的方式，讓你不再濕搭搭。</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/S9gpt1l-opc?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe> -->
+                                    <div id="video">
+                                        <video id="video1" preload="auto" width="100%">
+                                          <source src="umbrella_news_short.mp4" type="video/mp4">
+                                          <source src="umbrella_news_short.ogg" type="video/ogg">
+                                        </video>
+                                    </div>
+                                    
+                                </div>
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-screen-smartphone text-primary"></i>
+                                    <h3>簡易申請</h3>
+                                    <p class="text-muted">只要手機或是E-mail，即可以馬上申請加入</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-location-pin text-primary"></i>
+                                    <h3>傘傘愛地圖查詢</h3>
+                                    <p class="text-muted">隨時查詢哪裡可以租借或歸還傘傘愛</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-present text-primary"></i>
+                                    <h3>免費下載</h3>
+                                    <p class="text-muted"> 傘傘愛App隨時隨地免費下載</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-umbrella text-primary"></i>
+                                    <h3>即時天氣</h3>
+                                    <p class="text-muted"> 定時更新天氣動態，隨時掌握氣候資訊</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="download" class="download bg-primary text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="section-heading">傘傘愛-公共連署提案</h2>
+                    <p>我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，
+                    <br>可用悠遊卡＆e-mail簡易註冊，並期望在2017年能通過5000人連署-提案設置傘傘愛。
+                    <br>讓台北各大捷運站出口＆各個公家機關皆可設置
+                    
+                    </p>
+                    <div class="badges">
+                        <img src="img/EasyCard_Sample.svg_.png" alt="">
+                        <img src="img/Gmail-icon1.png" alt="">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <div class="container">
+                <h3>忘記帶傘了嗎？<br>快來申請<br>傘傘愛-公共雨傘租借系統</h3>
+                <!--<a href="#contact" class="btn btn-outline btn-xl page-scroll"> 立即申請可享3次免費試用</a>-->
+                <div class = "email-input ">
+                 <style type = "text/css">
+
+        .signupButton {
+            background-color:#3ac162;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            border-radius:10px;
+            border:2px solid #18ab29;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:20px;
+            padding:10px 42px;
+            text-decoration:none;
+            text-align: center;
+        }
+        .signupButton:hover {
+            background-color:#3ac162;
+        }
+        .signupButton:active {
+            position:relative;
+            top:1px;
+        }
+        /*header字的顏色*/
+        .header-content{
+            color: beige;
+        }
+
+
+        </style>
+
+
+        <script type="text/javascript">var submitted=false; </script>
+        <iframe id="popupwindow" name="popupwindow" style="display: none;" 
+                onload="if(submitted) {window.location='thankyou.html';}">        
+        </iframe>
+
+        <form action="http://www.newsleopard.com/mailverify.htm?x=000000005835b090015838730de41283" 
+        target="popupwindow" method="post" onsubmit="submitted=true;" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;max-width: 300px;margin: 10px 0;padding: 12px 0;/*background: #F5F5F5;*/border-radius: 8px;">
+        
+        <h1 style="color: white; -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0.1em 0;text-align: center;font-size: 1.5em;">加入傘傘愛</h1>
+        <fieldset>
+            <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white; text-align: center;"> </label>
+            <input placeholder = "輸入 email" type="email" id="mail" name="email" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;color: #000000;font: inherit; text-indent:5px;;line-height: normal;background: #FFFFFF;font-size: 16px;height: auto;outline: 0;padding: 8px;width: 100%;background-color: #FFFFFF;box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;margin-bottom: 30px; display:block; ">
+            <button class = "signupButton" type="submit" style="border-radius: 5px;width: 100%;border: 1px solid #44c767;background-color:#3ac162;border-width: 1px 1px 3px;overflow: visible;margin-bottom: 20px;text-transform: none;cursor: pointer;">立即申請享3次免費使用</button>
+            <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white;text-align: center"></label>
+        </fieldset>
+        </form>
+            </div>
+            </div>
+            
+        </div>
+    
+        <div class="overlay">
+            
+        </div>
+    </section>
+
+    <section id="contact" class="contact bg-primary">
+        <div class="container">
+            <h2>傘傘<i class="fa fa-heart"></i> 罩著您</h2>
+            <ul class="list-inline list-social">
+                <!--<li class="social-twitter">
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>-->
+                <li class="social-facebook">
+                    <a href="https://www.facebook.com/umbrellataipei/"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="social-google-plus">
+                    <a href="http://www.google.com"><i class="fa fa-google-plus"></i></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2017 傘傘愛正式上線. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <style type="text/css">
+        /*=============自行修改================*/
+        /*iphone6內 影片位置*/
+        div#video{
+             transform: translateY(160px);
+        }
+        div.container {
+            margin: 0 auto;
+        }
+
+        /*=============RWD===============*/
+        /*  px與em切換: http://pxtoem.com/ */
+        @media (max-width: 767px){
+            /*傘傘愛 -公共雨傘租借系統。*/
+            header .header-content .header-content-inner h1{
+                font-size: ;
+            }
+            /*我們是雨傘界的Ubike，讓你雨天也能有把傘。簡易申請，輕鬆租借，每次只要5元！*/
+            .header-content-inner p{
+                font-size: ;
+            }
+            
+            /*想知道更多傘傘愛*/
+            .header-content-inner a{
+                font-size: ;
+            }
+            /*不穩定的氣候你濕透了嗎？ 不用擔心，有了傘傘愛你不再成為落湯雞！*/
+            .header-content-inner h2.section-heading{
+               font-size: ; 
+            }
+            /*申請簡單，租借方便，而且每次只要5元！*/
+            .section-heading h2{
+               font-size: ; 
+            }
+            /*現在開始免費下載，我們提供最簡易的方式，讓你不再濕搭搭。*/
+            .section-heading p.text-muted{
+               font-size: ; 
+            }
+
+            /*調icon大小*/
+            section.features .feature-item i{
+                font-size: ;   
+            }
+            /*簡易申請*/
+            section.features .feature-item h3 {
+                font-size: ;   
+            }
+            /*只要手機或是E-mail，即可以馬上申請加入*/
+            section.features .feature-item p {
+                font-size: ;   
+            }
+
+            section.download h2{
+                font-size: ;
+            }
+            /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
+            section.download p{
+                font-size: ;
+            }
+            /*忘記帶傘了嗎？......*/
+            section.cta .cta-content h3{
+
+            }
+            /*立即申請...3次免費*/
+            .signupButton{
+                font-size: ;
+            }
+            /*傘傘愛 罩著您*/
+            section h2 {
+                font-size: ;
+            }                
+            /*facebook & google+*/
+            section.contact ul.list-social li a {
+                /*width: 80px;
+                height: 80px;
+                line-height:80px;*/
+            }
+
+            section.contact ul.list-social li a i{
+                /*font-size: 40px;*/
+            }
+        }
+
+
+        /*=============自行修改================*/
+    </style>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/new-age.min.js"></script>
+
+</body>
+
+</html>
+
