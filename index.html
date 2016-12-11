@@ -79,16 +79,18 @@
                 playvideo.volume = 0.2;
                 var offset = video.offset();
                 //iphone6 手機螢幕長度
-                var screen_length = $(".screen").height()
+                // var screen_length = $(".screen").height()
                 //iphone6 手機螢幕至網頁最上頭
-                var screen_offsetTop = $(".screen").offset().top
+                // var screen_offsetTop = $(".screen").offset().top
 
                 var y = offset.top, h = video.height(),
-                    sl = screen_length , so = screen_offsetTop,
-                    end = y + h,
+                    // sl = screen_length , so = screen_offsetTop,
+                    
                     deviation = window.innerHeight*(2/3);
+                    start = y-deviation
+                    end = y + (1/2)*h,
                     console.log(window.pageYOffset);
-                    if (window.pageYOffset > so-deviation && window.pageYOffset < end) {
+                    if (window.pageYOffset > y-deviation && window.pageYOffset < end) {
                         playvideo.play();
                     } else {
                         playvideo.pause();
@@ -176,28 +178,31 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="device-container">
+                <div class="col-md-4" id="video">
+
+                    <!-- <div class="device-container">
                         <div class="device-mockup iphone6_plus portrait white">
                             <div class="device">
-                                <div class="screen">
+                                <div class="screen"> -->
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
                                     <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/S9gpt1l-opc?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe> -->
-                                    <div id="video">
+                                    <!-- <div id="video"> -->
                                         <video id="video1" preload="auto" width="100%">
                                           <source src="umbrella_news_short.mp4" type="video/mp4">
                                           <source src="umbrella_news_short.ogg" type="video/ogg">
+                                          Your browser does not support the video tag.
                                         </video>
-                                    </div>
+                                    <!-- </div> -->
                                     
-                                </div>
-                                <div class="button">
-                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                <!-- </div> -->
+                                <!-- <div class="button">
+                                    You can hook the "home button" to some JavaScript events or just remove it
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
+                <!-- <div class="clearfix"></div> -->
                 <div class="col-md-8">
                     <div class="container-fluid">
                         <div class="row">
@@ -376,10 +381,12 @@
         .header-content{
             color: beige;
         }
-        h3{
-            margin: 0
+        div.clearfix{
+            clear: both;
         }
-        
+        div#video{
+            margin-bottom: 150px;
+        }
         /*=============RWD===============*/
         /*  px與em切換: http://pxtoem.com/ */
         @media (min-width: 768px){
@@ -397,10 +404,10 @@
             h3#web{
                 display: none;
             }
-            /*section.features .feature-item{
-                padding: 0;
-                margin: 0 auto 100px auto;
-            }*/
+            section.features .feature-item {
+                text-align: center;
+                margin: 100px auto 0;
+            }
             /*傘傘愛 -公共雨傘租借系統。*/
             header .header-content .header-content-inner h1{
                 font-size: 32px;
