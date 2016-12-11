@@ -145,7 +145,7 @@
                 <div class="col-sm-7">
                     <div class="header-content">
                         <div class="header-content-inner">
-                            <h1>傘傘愛 <br>-公共雨傘租借系統。
+                            <h1>傘傘愛 <br>-公共雨傘租借系統
                             </h1>
                             <p>我們是雨傘界的Ubike，讓你雨天也能有把傘。
                                 <br> 簡易申請，輕鬆租借，每次只要5元！
@@ -205,7 +205,8 @@
                                 <div class="feature-item">
                                     <i class="icon-screen-smartphone text-primary"></i>
                                     <h3>簡易申請</h3>
-                                    <p class="text-muted">只要手機或是E-mail，即可以馬上申請加入</p>
+                                    <p id="web" class="text-muted">只要手機或是E-mail，即可以馬上申請加入</p>
+                                    <p id="mobile" class="text-muted">只要手機或是E-mail，<br>即可以馬上申請加入</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -228,7 +229,8 @@
                                 <div class="feature-item">
                                     <i class="icon-umbrella text-primary"></i>
                                     <h3>即時天氣</h3>
-                                    <p class="text-muted"> 定時更新天氣動態，隨時掌握氣候資訊</p>
+                                    <p id="web" class="text-muted"> 定時更新天氣動態，隨時掌握氣候資訊</p>
+                                    <p id="mobile" class="text-muted"> 定時更新天氣動態，<br>隨時掌握氣候資訊</p>
                                 </div>
                             </div>
                         </div>
@@ -242,10 +244,19 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h2 class="section-heading">傘傘愛-公共連署提案</h2>
-                    <p>我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，
+                    <p id="web">我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，
                     <br>可用悠遊卡＆e-mail簡易註冊，並期望在2017年能通過5000人連署-提案設置傘傘愛。
                     <br>讓台北各大捷運站出口＆各個公家機關皆可設置
-                    
+                    </p>
+                    <p id="mobile">
+                        我們提供任何需要的人，
+                    <br>簡單的借到一把能夠遮陽避雨的傘，
+                    <br>可用悠遊卡＆e-mail簡易註冊。
+                    <br>
+                    <br>並期望在2017年能通過5000人連署
+                    <br>-提案設置傘傘愛，
+                    <br>讓台北各大捷運站出口
+                    <br>＆各個公家機關皆可設置。
                     </p>
                     <div class="badges">
                         <img src="img/EasyCard_Sample.svg_.png" alt="">
@@ -260,7 +271,9 @@
     <section class="cta">
         <div class="cta-content">
             <div class="container">
-                <h3>忘記帶傘了嗎？<br>快來申請<br>傘傘愛-公共雨傘租借系統</h3>
+                <h3 id="web">忘記帶傘了嗎？<br>快來申請<br>傘傘愛-公共雨傘租借系統</h3>
+                <h3 id="mobile">忘記帶傘了嗎？<br>快來申請<br>傘傘愛-<br>公共雨傘租借系統</h3>
+
                 <!--<a href="#contact" class="btn btn-outline btn-xl page-scroll"> 立即申請可享3次免費試用</a>-->
                 <div class = "email-input ">
                  <style type = "text/css">
@@ -366,17 +379,35 @@
         h3{
             margin: 0
         }
-
+        
         /*=============RWD===============*/
         /*  px與em切換: http://pxtoem.com/ */
+        @media (min-width: 768px){
+            p#mobile{
+                display: none;
+            }
+            h3#mobile{
+                display: none;
+            }
+        }
         @media (max-width: 767px){
+            p#web{
+                display: none;
+            }
+            h3#web{
+                display: none;
+            }
+            /*section.features .feature-item{
+                padding: 0;
+                margin: 0 auto 100px auto;
+            }*/
             /*傘傘愛 -公共雨傘租借系統。*/
             header .header-content .header-content-inner h1{
-                font-size: ;
+                font-size: 32px;
             }
             /*我們是雨傘界的Ubike，讓你雨天也能有把傘。簡易申請，輕鬆租借，每次只要5元！*/
             .header-content-inner p{
-                font-size: ;
+                display: none;
             }
             
             /*想知道更多傘傘愛*/
@@ -385,11 +416,11 @@
             }
             /*不穩定的氣候你濕透了嗎？ 不用擔心，有了傘傘愛你不再成為落湯雞！*/
             .header-content-inner h2.section-heading{
-               font-size: ; 
+               font-size: 16px; 
             }
             /*申請簡單，租借方便，而且每次只要5元！*/
             .section-heading h2{
-               font-size: ; 
+               font-size: 32px; 
             }
             /*現在開始免費下載，我們提供最簡易的方式，讓你不再濕搭搭。*/
             .section-heading p.text-muted{
@@ -402,23 +433,27 @@
             }
             /*簡易申請*/
             section.features .feature-item h3 {
-                font-size: ;   
+                font-size: ; 
+                margin-top: 20px; 
+                margin-bottom: 10px; 
+
             }
             /*只要手機或是E-mail，即可以馬上申請加入*/
             section.features .feature-item p {
                 font-size: ;   
             }
-
+            /*傘傘愛-公共連署提案*/
             section.download h2{
-                font-size: ;
+                font-size: 32px;
             }
             /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
             section.download p{
                 font-size: ;
+                text-align: left;
             }
             /*忘記帶傘了嗎？......*/
             section.cta .cta-content h3{
-
+                font-size: 28px;
             }
             /*立即申請...3次免費*/
             .signupButton{
