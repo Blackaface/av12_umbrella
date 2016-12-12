@@ -67,7 +67,7 @@
              ga('require', 'displayfeatures');
              ga('send', 'pageview');
         </script>
-        <script>
+        <!-- <script>
         var videos = document.getElementsByTagName("video"),
         
         fraction = 0.8;
@@ -98,6 +98,47 @@
         }
         window.addEventListener('scroll', checkScroll, false);
         window.addEventListener('resize', checkScroll, false);
+        </script> -->
+        <!-- youtube embeded -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>>
+        <script>
+          // Load the IFrame Player API code asynchronously.
+          var tag = document.createElement('script');
+          tag.src = "https://www.youtube.com/player_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          // Replace the 'ytplayer' element with an <iframe> and
+          // YouTube player after the API code downloads.
+          
+          var player;
+          function onYouTubePlayerAPIReady() {
+            player = new YT.Player('ytplayer', {
+              height: '330px',
+              width: '100%',
+              playerVars : {
+                    autoplay : 0
+                },
+              videoId: '1-EkaxRdX20'
+            });
+          }
+          $(window).scroll(function() {
+            var deviation = (2/3)*window.innerHeight
+            var h = $("iframe").height()
+            var start = $("iframe").offset().top - deviation
+            var end = $("iframe").offset().top + h + deviation
+            $("iframe").each( function() {
+                console.log($(window).scrollTop())
+                if( $(window).scrollTop() > $(this).offset().top - deviation ){
+                    $(this).css('opacity',1);
+                    player.playVideo();
+                } else {
+                    $(this).css('opacity',0);
+                    player.stopVideo();
+                }
+            }); 
+        });
+
         </script>
         <!-- END GA -->
         
@@ -182,11 +223,12 @@
 
                     <!-- <div class="device-container">
                         <div class="device-mockup iphone6_plus portrait white">
-                            <div class="device">
-                                <div class="screen"> -->
+                            <div class="device"> -->
+                                <div class="video-holder">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/S9gpt1l-opc?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe> -->
+                                    <!-- <div id="ytplayer">Youtube player here</div> -->
                                     <div id="video">
+                                    <!-- <iframe width="585px" height="330px" src="https://www.youtube.com/embed/S9gpt1l-opc?rel=0&autoplay=0" frameborder="0" allowfullscreen></iframe> -->
                                         <video id="video1" preload="auto" width="100%">
                                           <source src="umbrella_news_short.mp4" type="video/mp4">
                                           <source src="umbrella_news_short.ogg" type="video/ogg">
@@ -194,7 +236,7 @@
                                         </video>
                                     </div>
                                     
-                                <!-- </div> -->
+                                </div>
                                 <!-- <div class="button">
                                     You can hook the "home button" to some JavaScript events or just remove it
                                 </div>
@@ -373,27 +415,41 @@
 
     <style type="text/css">
         /*=============自行修改================*/
-        /*iphone6內 影片位置*/
-         div#video{
-            margin-bottom: 150px;
-            top: 200px;
-            transform: translateY(-50%);
-            position: absolute;
-        }
-        section#features div.col-md-6{
-            position: relative;
-        }
-        /*header字的顏色*/
+        
         .header-content{
             color: beige;
         }
         div.clearfix{
             clear: both;
         }
+        section.features{
+            padding: 100px 0 0 0;
+        }
        
         /*=============RWD===============*/
         /*  px與em切換: http://pxtoem.com/ */
+        @media (min-width: 992px){
+            /*iphone6內 影片位置*/
+        div#video{
+            margin-bottom: 150px;
+            margin-top: 50%;
+            transform: translateY(-50%);
+            }
+        section#features div.video_holder{
+            position: relative;
+            }
+        }
+        @media (max-width: 991px){
+            /*iphone6內 影片位置*/
+        div#video{
+            margin-bottom: 100px;
+            }
+        section#features div.video_holder{
+            position: relative;
+            }
+        }
         @media (min-width: 768px){
+        /*header字的顏色*/
             p#mobile{
                 display: none;
             }
@@ -402,6 +458,9 @@
             }
         }
         @media (max-width: 767px){
+            div#video {
+                margin-bottom: 0;  
+            }
             p#web{
                 display: none;
             }

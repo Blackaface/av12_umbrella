@@ -150,6 +150,7 @@ header {
   position: relative;
   width: 100%;
   min-height: auto;
+  margin-left: 100px;
   overflow-y: hidden;
   background-size: cover;
   background: url("../img/walking-in-rain-painting-wallpaper-hd_1440.jpg");
@@ -158,6 +159,7 @@ header {
   /*Chrome 10-25, Safari 5.1-6 */
   background: url("../img/walking-in-rain-painting-wallpaper-hd_1440.jpg");
   /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-position: center;
   color: white;
 }
 header .header-content {
