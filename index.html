@@ -67,12 +67,10 @@
              ga('require', 'displayfeatures');
              ga('send', 'pageview');
         </script>
-        <!-- <script>
-        var videos = document.getElementsByTagName("video"),
-        
-        fraction = 0.8;
+        <!-- video autoplay by position judgement -->
+        <script>
+        var videos = document.getElementsByTagName("video");
         function checkScroll() {
-
                 var video = $('#video1');
                 var playvideo = videos[0];
                 //音量大小控制
@@ -85,7 +83,6 @@
 
                 var y = offset.top, h = video.height(),
                     // sl = screen_length , so = screen_offsetTop,
-                    
                     deviation = window.innerHeight*(2/3);
                     start = y-deviation
                     end = y + (1/2)*h,
@@ -98,9 +95,9 @@
         }
         window.addEventListener('scroll', checkScroll, false);
         window.addEventListener('resize', checkScroll, false);
-        </script> -->
-        <!-- youtube embeded -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        </script>
+        <!-- youtube api embeded -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>
           // Load the IFrame Player API code asynchronously.
           var tag = document.createElement('script');
@@ -141,7 +138,7 @@
             }); 
         });
 
-        </script>
+        </script> -->
         <!-- END GA -->
         
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -229,13 +226,13 @@
                                 <div class="video-holder">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
                                     <div id="video">
-                                        <div id="ytplayer">Youtube player here</div>
+                                        <!-- <div id="ytplayer">Youtube player here</div> -->
                                     <!-- <iframe width="585px" height="330px" src="https://www.youtube.com/embed/S9gpt1l-opc?rel=0&autoplay=0" frameborder="0" allowfullscreen></iframe> -->
-                                        <!-- <video id="video1" preload="auto" width="100%">
-                                          <source src="umbrella_news_short.mp4" type="video/mp4">
+                                        <video id="video1" preload="auto" width="100%">
+                                          <source src="https://s3-ap-northeast-1.amazonaws.com/sportslinkpj/video/umbrella_news_short.mp4" type="video/mp4">
                                           <source src="umbrella_news_short.ogg" type="video/ogg">
                                           Your browser does not support the video tag.
-                                        </video> -->
+                                        </video>
                                     </div>
                                     
                                 </div>
@@ -583,8 +580,5 @@
 </body>
 
 </html>
-
-
-
 
 
