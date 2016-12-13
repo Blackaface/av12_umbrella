@@ -126,14 +126,15 @@
             var deviation = (2/3)*window.innerHeight
             var h = $("iframe").height()
             var start = $("iframe").offset().top - deviation
-            var end = $("iframe").offset().top + h + deviation
+            var end = $("iframe").offset().top + h 
             $("iframe").each( function() {
                 console.log($(window).scrollTop())
-                if( $(window).scrollTop() > $(this).offset().top - deviation ){
+                if( $(window).scrollTop() > start && $(window).scrollTop() < end){
                     $(this).css('opacity',1);
                     player.playVideo();
+                    player.setVolume(20);
                 } else {
-                    $(this).css('opacity',0);
+                    // $(this).css('opacity',0);
                     player.stopVideo();
                 }
             }); 
@@ -226,14 +227,14 @@
                             <div class="device"> -->
                                 <div class="video-holder">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <!-- <div id="ytplayer">Youtube player here</div> -->
                                     <div id="video">
+                                        <div id="ytplayer">Youtube player here</div>
                                     <!-- <iframe width="585px" height="330px" src="https://www.youtube.com/embed/S9gpt1l-opc?rel=0&autoplay=0" frameborder="0" allowfullscreen></iframe> -->
-                                        <video id="video1" preload="auto" width="100%">
+                                        <!-- <video id="video1" preload="auto" width="100%">
                                           <source src="umbrella_news_short.mp4" type="video/mp4">
                                           <source src="umbrella_news_short.ogg" type="video/ogg">
                                           Your browser does not support the video tag.
-                                        </video>
+                                        </video> -->
                                     </div>
                                     
                                 </div>
@@ -423,7 +424,7 @@
             clear: both;
         }
         section.features{
-            padding: 100px 0 0 0;
+            padding: 100px 0 0 0 ;
         }
        
         /*=============RWD===============*/
