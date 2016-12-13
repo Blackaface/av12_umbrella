@@ -41,105 +41,105 @@
     <link href="css/new-age.min.css" rel="stylesheet">
 
     <!-- Facebook Pixel Code -->
-        <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-        document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1712651812389714');
-        fbq('track', 'PageView');
-        fbq('track', 'Lead');
-        fbq('track', 'CompleteRegistration');
-        </script>
-        <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1712651812389714&ev=PageView&noscript=1"
-        /></noscript>
-        <!-- DO NOT MODIFY -->
-        <!-- End Facebook Pixel Code -->
-        <!-- GA started -->
-         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-             ga('create', 'UA-87093034-1', 'auto');
-             ga('require', 'displayfeatures');
-             ga('send', 'pageview');
-        </script>
-        <!-- video autoplay by position judgement -->
-        <script>
-        var videos = document.getElementsByTagName("video");
-        function checkScroll() {
-                var video = $('#video1');
-                var playvideo = videos[0];
-                //音量大小控制
-                playvideo.volume = 0.2;
-                var offset = video.offset();
-                //iphone6 手機螢幕長度
-                // var screen_length = $(".screen").height()
-                //iphone6 手機螢幕至網頁最上頭
-                // var screen_offsetTop = $(".screen").offset().top
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1712651812389714');
+    fbq('track', 'PageView');
+    fbq('track', 'Lead');
+    fbq('track', 'CompleteRegistration');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1712651812389714&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+    <!-- GA started -->
+     <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         ga('create', 'UA-87093034-1', 'auto');
+         ga('require', 'displayfeatures');
+         ga('send', 'pageview');
+    </script>
+    <!-- video autoplay by position judgement -->
+    <script>
+    var videos = document.getElementsByTagName("video");
+    function checkScroll() {
+            var video = $('#video1');
+            var playvideo = videos[0];
+            //音量大小控制
+            playvideo.volume = 0.2;
+            var offset = video.offset();
+            //iphone6 手機螢幕長度
+            // var screen_length = $(".screen").height()
+            //iphone6 手機螢幕至網頁最上頭
+            // var screen_offsetTop = $(".screen").offset().top
 
-                var y = offset.top, h = video.height(),
-                    // sl = screen_length , so = screen_offsetTop,
-                    deviation = window.innerHeight*(2/3);
-                    start = y-deviation
-                    end = y + (1/2)*h,
-                    console.log(window.pageYOffset);
-                    if (window.pageYOffset > y-deviation && window.pageYOffset < end) {
-                        playvideo.play();
-                    } else {
-                        playvideo.pause();
-                    }
-        }
-        window.addEventListener('scroll', checkScroll, false);
-        window.addEventListener('resize', checkScroll, false);
-        </script>
-        <!-- youtube api embeded -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>
-          // Load the IFrame Player API code asynchronously.
-          var tag = document.createElement('script');
-          tag.src = "https://www.youtube.com/player_api";
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-          // Replace the 'ytplayer' element with an <iframe> and
-          // YouTube player after the API code downloads.
-          
-          var player;
-          function onYouTubePlayerAPIReady() {
-            player = new YT.Player('ytplayer', {
-              height: '330px',
-              width: '100%',
-              playerVars : {
-                    autoplay : 0,
-                    controls : 0
-                },
-              videoId: '1-EkaxRdX20'
-            });
-          }
-          $(window).scroll(function() {
-            var deviation = (2/3)*window.innerHeight
-            var h = $("iframe").height()
-            var start = $("iframe").offset().top - deviation
-            var end = $("iframe").offset().top + h 
-            $("iframe").each( function() {
-                console.log($(window).scrollTop())
-                if( $(window).scrollTop() > start && $(window).scrollTop() < end){
-                    $(this).css('opacity',1);
-                    player.playVideo();
-                    player.setVolume(20);
+            var y = offset.top, h = video.height(),
+                // sl = screen_length , so = screen_offsetTop,
+                deviation = window.innerHeight*(2/3);
+                start = y-deviation
+                end = y + (1/2)*h,
+                console.log(window.pageYOffset);
+                if (window.pageYOffset > y-deviation && window.pageYOffset < end) {
+                    playvideo.play();
                 } else {
-                    // $(this).css('opacity',0);
-                    player.stopVideo();
+                    playvideo.pause();
                 }
-            }); 
-        });
+    }
+    window.addEventListener('scroll', checkScroll, false);
+    window.addEventListener('resize', checkScroll, false);
+    </script>
+    <!-- youtube api embeded -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      // Load the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        </script> -->
-        <!-- END GA -->
+      // Replace the 'ytplayer' element with an <iframe> and
+      // YouTube player after the API code downloads.
+      
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('ytplayer', {
+          height: '330px',
+          width: '100%',
+          playerVars : {
+                autoplay : 0,
+                controls : 0
+            },
+          videoId: '1-EkaxRdX20'
+        });
+      }
+      $(window).scroll(function() {
+        var deviation = (2/3)*window.innerHeight
+        var h = $("iframe").height()
+        var start = $("iframe").offset().top - deviation
+        var end = $("iframe").offset().top + h 
+        $("iframe").each( function() {
+            console.log($(window).scrollTop())
+            if( $(window).scrollTop() > start && $(window).scrollTop() < end){
+                $(this).css('opacity',1);
+                player.playVideo();
+                player.setVolume(20);
+            } else {
+                // $(this).css('opacity',0);
+                player.stopVideo();
+            }
+        }); 
+    });
+
+    </script> -->
+    <!-- END GA -->
         
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -243,7 +243,6 @@
                         </div>
                     </div> -->
                 </div>
-                <!-- <div class="clearfix"></div> -->
                 <div class="col-md-6">
                     <div class="container-fluid">
                         <div class="row">
@@ -322,55 +321,24 @@
 
                 <!--<a href="#contact" class="btn btn-outline btn-xl page-scroll"> 立即申請可享3次免費試用</a>-->
                 <div class = "email-input ">
-                 <style type = "text/css">
-
-        .signupButton {
-            background-color:#3ac162;
-            -moz-border-radius:10px;
-            -webkit-border-radius:10px;
-            border-radius:10px;
-            border:2px solid #18ab29;
-            display:inline-block;
-            cursor:pointer;
-            color:#ffffff;
-            font-family:Arial;
-            font-size:20px;
-            padding:10px 42px;
-            text-decoration:none;
-            text-align: center;
-        }
-        .signupButton:hover {
-            background-color:#3ac162;
-        }
-        .signupButton:active {
-            position:relative;
-            top:1px;
-        }
-        
-
-
-        </style>
-
-
-        <script type="text/javascript">var submitted=false; </script>
-        <iframe id="popupwindow" name="popupwindow" style="display: none;" 
-                onload="if(submitted) {window.location='thankyou.html';}">        
-        </iframe>
-
-        <form action="http://www.newsleopard.com/mailverify.htm?x=000000005835b090015838730de41283" 
-        target="popupwindow" method="post" onsubmit="submitted=true;" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;max-width: 300px;margin: 10px 0;padding: 12px 0;/*background: #F5F5F5;*/border-radius: 8px;">
-        
-        <h1 style="color: white; -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0.1em 0;text-align: center;font-size: 1.5em;">加入傘傘愛</h1>
-        <fieldset>
-            <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white; text-align: center;"> </label>
-            <input placeholder = "輸入 email" type="email" id="mail" name="email" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;color: #000000;font: inherit; text-indent:5px;;line-height: normal;background: #FFFFFF;font-size: 16px;height: auto;outline: 0;padding: 8px;width: 100%;background-color: #FFFFFF;box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;margin-bottom: 30px; display:block; ">
-            <button class = "signupButton" type="submit" style="border-radius: 5px;width: 100%;border: 1px solid #44c767;background-color:#3ac162;border-width: 1px 1px 3px;overflow: visible;margin-bottom: 20px;text-transform: none;cursor: pointer;">立即申請享3次免費使用</button>
-            <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white;text-align: center"></label>
-        </fieldset>
-        </form>
+                    <script type="text/javascript">var submitted=false; </script>
+                    <!-- Thank You Page -->
+                    <iframe id="popupwindow" name="popupwindow" style="display: none;" 
+                            onload="if(submitted) {window.location='thankyou.html';}">        
+                    </iframe>
+                    <form action="http://www.newsleopard.com/mailverify.htm?x=000000005835b090015838730de41283" 
+                    target="popupwindow" method="post" onsubmit="submitted=true;">
+                        <h1>加入傘傘愛</h1>
+                        <fieldset>
+                            <!-- <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white; text-align: center;"> </label> -->
+                            <input placeholder = "輸入 email" type="email" id="mail" name="email" >
+                            <button class = "signupButton" type="submit" style="border-radius: 5px;width: 100%;border: 1px solid #44c767;background-color:#3ac162;border-width: 1px 1px 3px;overflow: visible;margin-bottom: 20px;text-transform: none;cursor: pointer;">立即申請享3次免費使用
+                            </button>
+                           <!--  <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white;text-align: center"></label> -->
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-            </div>
-            
         </div>
     
         <div class="overlay">
@@ -411,159 +379,227 @@
             </ul>
         </div>
     </footer>
+</body>
 
-    <style type="text/css">
-        /*=============自行修改================*/
+</html>
+
+<style type="text/css">
+    /*=============e-mail ================*/
+    section#cta div.email-input {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 300px;
+        margin: 10px 0;
+        padding: 12px 0;
+        /*background: #F5F5F5;*/
+        border-radius: 8px;
+    }
+
+    section#cta input{
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #000000;
+        font: inherit; 
+        text-indent:5px;
+        line-height: normal;
+        background: #FFFFFF;
+        font-size: 16px;
+        height: auto;
+        outline: 0;
+        padding: 8px;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        margin-bottom: 30px; 
+        display:block;
+    }
+    section#cta h1{
+        color: white; 
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0.1em 0;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .signupButton {
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            display:inline-block;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:20px;
+            padding:10px 42px;
+            text-decoration:none;
+            text-align: center;
+            border-radius: 5px;
+            width: 100%;
+            border: 1px solid #44c767;
+            background-color:#3ac162;
+            border-width: 1px 1px 3px;
+            overflow: visible;
+            margin-bottom: 20px;
+            text-transform: none;
+            cursor: pointer;
+        }
+    .signupButton:hover {
+        background-color:#3ac162;
+    }
+    .signupButton:active {
+        position:relative;
+        top:1px;
+    }
+    /*=============自行修改================*/
+
+    .header-content{
+        color: beige;
+    }
+    div.clearfix{
+        clear: both;
+    }
+    section.features{
+        padding: 100px 0 0 0 ;
+    }
+
+    /*=============RWD===============*/
+    /*  px與em切換: http://pxtoem.com/ */
+    @media (min-width: 1200px){
+        /*傘傘愛-公共連署提案*/
+        section#download h2{
+            font-size: 75px;
+        }
         
-        .header-content{
-            color: beige;
+        /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
+        section#download p{
+            font-size: 18px;
         }
-        div.clearfix{
-            clear: both;
+    }
+    @media (min-width: 992px){
+        /*iphone6內 影片位置*/
+    div#video{
+        margin-bottom: 150px;
+        margin-top: 50%;
+        transform: translateY(-50%);
         }
-        section.features{
-            padding: 100px 0 0 0 ;
+    section#features div.video_holder{
+        position: relative;
         }
-       
-        /*=============RWD===============*/
-        /*  px與em切換: http://pxtoem.com/ */
-        @media (min-width: 1200px){
-            /*傘傘愛-公共連署提案*/
-            section#download h2{
-                font-size: 75px;
-            }
-            
-            /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
-            section#download p{
-                font-size: 18px;
-            }
-        }
-        @media (min-width: 992px){
-            /*iphone6內 影片位置*/
+    }
+    @media (max-width: 991px){
+        /*iphone6內 影片位置*/
         div#video{
-            margin-bottom: 150px;
-            margin-top: 50%;
-            transform: translateY(-50%);
-            }
+            margin-bottom: 100px;
+        }
         section#features div.video_holder{
             position: relative;
-            }
         }
-        @media (max-width: 991px){
-            /*iphone6內 影片位置*/
-            div#video{
-                margin-bottom: 100px;
-            }
-            section#features div.video_holder{
-                position: relative;
-            }
+    }
+    @media (min-width: 768px){
+    /*header字的顏色*/
+        p#mobile{
+            display: none;
         }
-        @media (min-width: 768px){
-        /*header字的顏色*/
-            p#mobile{
-                display: none;
-            }
-            h3#mobile{
-                display: none;
-            }
-            /*傘傘愛-公共連署提案*/
-            section.download h2{
-                font-size: 65px;
-            }
-            
-            /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
-            section.download p{
-                font-size: 16px;
-            }
+        h3#mobile{
+            display: none;
         }
-        @media (max-width: 767px){
-           
-            p#web{
-                display: none;
-            }
-            h3#web{
-                display: none;
-            }
-            section.features .feature-item {
-                text-align: center;
-            }
-            /*傘傘愛 -公共雨傘租借系統。*/
-            header .header-content .header-content-inner h1{
-                font-size: 32px;
-            }
-            /*我們是雨傘界的Ubike，讓你雨天也能有把傘。簡易申請，輕鬆租借，每次只要5元！*/
-            .header-content-inner p{
-                display: none;
-            }
-            
-            /*想知道更多傘傘愛*/
-            .header-content-inner a{
-                font-size: ;
-            }
-            /*不穩定的氣候你濕透了嗎？ 不用擔心，有了傘傘愛你不再成為落湯雞！*/
-            .header-content-inner h2.section-heading{
-               font-size: 16px; 
-            }
-            /*申請簡單，租借方便，而且每次只要5元！*/
-            .section-heading h2{
-               font-size: 32px; 
-            }
-            /*現在開始免費下載，我們提供最簡易的方式，讓你不再濕搭搭。*/
-            .section-heading p.text-muted{
-               font-size: ; 
-            }
-
-            /*調icon大小*/
-            section.features .feature-item i{
-                font-size: ;   
-            }
-            /*簡易申請*/
-            section.features .feature-item h3 {
-                font-size: ; 
-                margin-top: 20px; 
-                margin-bottom: 10px; 
-
-            }
-            /*只要手機或是E-mail，即可以馬上申請加入*/
-            section.features .feature-item p {
-                font-size: ;   
-            }
-            /*傘傘愛-公共連署提案*/
-            section.download h2{
-                font-size: 32px;
-            }
-            /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
-            section.download p{
-                font-size: ;
-                text-align: left;
-            }
-            /*忘記帶傘了嗎？......*/
-            section.cta .cta-content h3{
-                font-size: 28px;
-            }
-            /*立即申請...3次免費*/
-            .signupButton{
-                font-size: ;
-            }
-            /*傘傘愛 罩著您*/
-            section h2 {
-                font-size: ;
-            }                
-            /*facebook & google+*/
-            section.contact ul.list-social li a {
-                /*width: 80px;
-                height: 80px;
-                line-height:80px;*/
-            }
-
-            section.contact ul.list-social li a i{
-                /*font-size: 40px;*/
-            }
+        /*傘傘愛-公共連署提案*/
+        section.download h2{
+            font-size: 65px;
+        }
+        
+        /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
+        section.download p{
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 767px){
+       
+        p#web{
+            display: none;
+        }
+        h3#web{
+            display: none;
+        }
+        section.features .feature-item {
+            text-align: center;
+        }
+        /*傘傘愛 -公共雨傘租借系統。*/
+        header .header-content .header-content-inner h1{
+            font-size: 32px;
+        }
+        /*我們是雨傘界的Ubike，讓你雨天也能有把傘。簡易申請，輕鬆租借，每次只要5元！*/
+        .header-content-inner p{
+            display: none;
+        }
+        
+        /*想知道更多傘傘愛*/
+        .header-content-inner a{
+            font-size: ;
+        }
+        /*不穩定的氣候你濕透了嗎？ 不用擔心，有了傘傘愛你不再成為落湯雞！*/
+        .header-content-inner h2.section-heading{
+           font-size: 16px; 
+        }
+        /*申請簡單，租借方便，而且每次只要5元！*/
+        .section-heading h2{
+           font-size: 32px; 
+        }
+        /*現在開始免費下載，我們提供最簡易的方式，讓你不再濕搭搭。*/
+        .section-heading p.text-muted{
+           font-size: ; 
         }
 
+        /*調icon大小*/
+        section.features .feature-item i{
+            font-size: ;   
+        }
+        /*簡易申請*/
+        section.features .feature-item h3 {
+            font-size: ; 
+            margin-top: 20px; 
+            margin-bottom: 10px; 
 
-        /*=============自行修改================*/
-    </style>
+        }
+        /*只要手機或是E-mail，即可以馬上申請加入*/
+        section.features .feature-item p {
+            font-size: ;   
+        }
+        /*傘傘愛-公共連署提案*/
+        section.download h2{
+            font-size: 32px;
+        }
+        /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
+        section.download p{
+            font-size: ;
+            text-align: left;
+        }
+        /*忘記帶傘了嗎？......*/
+        section.cta .cta-content h3{
+            font-size: 28px;
+        }
+        /*立即申請...3次免費*/
+        .signupButton{
+            font-size: ;
+        }
+        /*傘傘愛 罩著您*/
+        section h2 {
+            font-size: ;
+        }                
+        /*facebook & google+*/
+        section.contact ul.list-social li a {
+            /*width: 80px;
+            height: 80px;
+            line-height:80px;*/
+        }
+
+        section.contact ul.list-social li a i{
+            /*font-size: 40px;*/
+        }
+    }
+</style>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -576,9 +612,3 @@
 
     <!-- Theme JavaScript -->
     <script src="js/new-age.min.js"></script>
-
-</body>
-
-</html>
-
-
