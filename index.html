@@ -121,6 +121,10 @@
                     controls : 0
                 },
               videoId: '1-EkaxRdX20'
+              events: {
+                  'onReady': onPlayerReady,
+                  'onStateChange': onPlayerStateChange
+                }
             });
           }
           $(window).scroll(function() {
