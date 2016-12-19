@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="傘傘愛-公共雨傘租借系統，不穩定的氣候你濕透了嗎？不用擔心，有了傘傘愛你不再成為落湯雞！">
     <meta name="author" content="">
 
     <title>傘傘愛</title>
@@ -38,7 +38,7 @@
 
 
     <!-- Theme CSS -->
-    <link href="css/new-age.min.css" rel="stylesheet">
+    <link href="css/landing_page.css" rel="stylesheet">
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -50,7 +50,6 @@
     fbq('init', '1712651812389714');
     fbq('track', 'PageView');
     fbq('track', 'Lead');
-    fbq('track', 'CompleteRegistration');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1712651812389714&ev=PageView&noscript=1"
@@ -111,7 +110,7 @@
       var player;
       function onYouTubePlayerAPIReady() {
         player = new YT.Player('ytplayer', {
-          height: '330px',
+          height: '400px',
           width: '100%',
           playerVars : {
                 autoplay : 0,
@@ -122,10 +121,10 @@
       }
       $(window).scroll(function() {
         var deviation = (2/3)*window.innerHeight
-        var h = $("iframe").height()
-        var start = $("iframe").offset().top - deviation
-        var end = $("iframe").offset().top + h 
-        $("iframe").each( function() {
+        var h = $("#video iframe").height()
+        var start = $("#video iframe").offset().top - deviation
+        var end = $("#video iframe").offset().top + h 
+        $("#video iframe").each( function() {
             console.log($(window).scrollTop())
             if( $(window).scrollTop() > start && $(window).scrollTop() < end){
                 $(this).css('opacity',1);
@@ -139,6 +138,24 @@
     });
 
     </script>
+    <!-- <script>
+        $( document ).ready(function() {
+            $("h1#error").hide();
+        });
+    </script>
+    <script>
+        function emailchecking() {
+           var empty = 0;
+           $('input[type=email]').each(function(){
+              if (this.value == "") {
+                  empty++;
+                   $("h1#error").show();
+              }
+           });
+           if(empty > 0) return submitted = false; 
+           else          return submitted = true;
+        }
+    </script> -->
     <!-- END GA -->
         
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -166,13 +183,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#download">傘傘愛-公共連署提案</a>
+                        <a class="page-scroll" href="#features">傘傘愛-公共連署提案</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#features">about傘傘愛</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">支持連署</a>
+                        <a class="page-scroll" href="#cta">about傘傘愛</a>
                     </li>
                 </ul>
             </div>
@@ -187,14 +201,33 @@
                 <div class="col-sm-7">
                     <div class="header-content">
                         <div class="header-content-inner">
-                            <h1>傘傘愛 <br>-公共雨傘租借系統
+                            <h1>傘傘愛 <br>公共雨傘租借系統
                             </h1>
-                            <p>我們是雨傘界的Ubike，讓你雨天也能有把傘。
-                                <br> 簡易申請，輕鬆租借，每次只要5元！
+                            <p id="multi-columns">不穩定的氣候你濕透了嗎？不用擔心，有了傘傘愛你不再成為落湯雞！
                             </p>
-                            <a href="#features" class="btn btn-outline btn-xl page-scroll">想知道更多傘傘愛</a>
-                            <h2 class="section-heading">不穩定的氣候你濕透了嗎？<br>不用擔心，有了傘傘愛你不再成為落湯雞！</h2>
-                            
+                            <p id="single-column">不穩定的氣候你濕透了嗎？<br>不用擔心，有了傘傘愛你不再成為落湯雞！</p>
+                            <!-- <a href="#features" class="btn btn-outline btn-xl page-scroll">想知道更多傘傘愛</a> -->
+                            <h2 class="section-heading">我們是雨傘界的Ubike<br>簡易申請 輕鬆租借</h2>
+                            <div class = "email-input ">
+                                <script type="text/javascript">var submitted=false; </script>
+                                <!-- Thank You Page -->
+                                <iframe id="popupwindow" name="popupwindow" style="display: none;" 
+                                        onload="if(submitted) {window.location='thankyou.html';}">        
+                                </iframe>
+                                <form action="http://www.newsleopard.com/mailverify.htm?x=000000005835b090015838730de41283" 
+                                target="popupwindow" method="post" onsubmit="submitted=true">
+                                <!-- submitted=true; -->
+                                    <h1>傘傘愛-公共雨傘租借系統</h1>
+                                    <fieldset>
+                                        <!-- <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white; text-align: center;"> </label> -->
+                                        <input placeholder = "輸入 email" type="email" id="mail" name="email" required>
+                                        <button name="email" class = "signupButton" type="submit">留下e-mail支持連署
+                                        </button>
+                                        <!-- <h1 id="error">請確實填入email</h1> -->
+                                       <!--  <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white;text-align: center"></label> -->
+                                    </fieldset>
+                                </form>
+                            </div>
                         </div>                  
                     </div>
                     
@@ -204,21 +237,24 @@
         </div>
     </header>
 
-    
-
     <section id="features" class="features">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h2>申請簡單，租借方便，而且每次只要5元！</h2>
-                        <p class="text-muted">現在開始免費下載，我們提供最簡易的方式，讓你不再濕搭搭。</p>
-                        <hr>
+                        <h2 id="multi-columns">請支持公共連署提案-"傘傘愛雨傘租借系統"</h2>
+                        <h2 id="single-column">請支持公共連署提案<br>"傘傘愛雨傘租借系統"</h2>
+                        <p class="text-muted" id="web">傘傘愛需要你的支持讓我們的理想得以實現。
+                        <br>我們期望改良目前愛心傘的借取方式，並建立一個系統化的管理方式，讓人們在雨天也能免除被雨淋濕的困惱！</p>
+                        <p class="text-muted" id="mobile">傘傘愛需要你的支持讓我們的理想得以實現。
+                        <br>我們期望改良目前愛心傘的借取方式，
+                        <br>並建立一個系統化的管理方式，
+                        <br>讓人們在雨天也能免除被雨淋濕的困惱！</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-9">
 
                     <!-- <div class="device-container">
                         <div class="device-mockup iphone6_plus portrait white">
@@ -244,10 +280,17 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="video_description">
+                                <p>傘傘愛和劉庭瑋設計師合作，建立一套公共傘租借系統。</p>
+                                <p>我們計畫在台北捷運站設置此系統，讓乘客在雨天時有多一種選擇，免除被雨淋濕的困腦。</p>
+                                <p>傘傘愛需要您的支持，讓此計劃能夠順利向台北市政府提案。
+                                只需留下您的e-mail就能夠支持傘傘愛並參加連署活動！</p>
+
+                            </div>
+                            <!-- <div class="col-md-6">
                                 <div class="feature-item">
                                     <i class="icon-screen-smartphone text-primary"></i>
                                     <h3>簡易申請</h3>
@@ -278,14 +321,14 @@
                                     <p id="web" class="text-muted"> 定時更新天氣動態，<br>隨時掌握氣候資訊</p>
                                     <p id="mobile" class="text-muted"> 定時更新天氣動態，<br>隨時掌握氣候資訊</p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
     </section>
 
-    <section id="download" class="download bg-primary text-center">
+    <!-- <section id="download" class="download bg-primary text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -312,29 +355,30 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="cta" id="cta">
         <div class="cta-content">
             <div class="container">
-                <h3 id="web">忘記帶傘了嗎？<br>快來申請<br>傘傘愛-公共雨傘租借系統</h3>
-                <h3 id="mobile">忘記帶傘了嗎？<br>快來申請<br><br>傘傘愛-公共雨傘租借系統</h3>
-
+                <h3 id="web">加入傘傘愛連署<br>讓雨天也能充滿微笑</h3>
+                <h3 id="mobile">加入傘傘愛連署<br>讓雨天也能充滿微笑</h3>
                 <!--<a href="#contact" class="btn btn-outline btn-xl page-scroll"> 立即申請可享3次免費試用</a>-->
                 <div class = "email-input ">
                     <script type="text/javascript">var submitted=false; </script>
                     <!-- Thank You Page -->
-                    <iframe id="popupwindow" name="popupwindow" style="display: none;" 
+                   <!--  <iframe id="popupwindow" name="popupwindow" style="display: none;" 
                             onload="if(submitted) {window.location='thankyou.html';}">        
-                    </iframe>
+                    </iframe> -->
                     <form action="http://www.newsleopard.com/mailverify.htm?x=000000005835b090015838730de41283" 
-                    target="popupwindow" method="post" onsubmit="submitted=true;">
-                        <h1>加入傘傘愛</h1>
+                    target="popupwindow" method="post" onsubmit="submitted=true">
+                    <!-- submitted=true; -->
+                        <h1>請支持“傘傘愛”</h1>
                         <fieldset>
                             <!-- <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white; text-align: center;"> </label> -->
-                            <input placeholder = "輸入 email" type="email" id="mail" name="email" >
-                            <button class = "signupButton" type="submit" style="border-radius: 5px;width: 100%;border: 1px solid #44c767;background-color:#3ac162;border-width: 1px 1px 3px;overflow: visible;margin-bottom: 20px;text-transform: none;cursor: pointer;">立即申請享3次免費使用
+                            <input placeholder = "輸入 email" type="email" id="mail" name="email" required>
+                            <button name="email" class = "signupButton" type="submit">留下e-mail支持連署
                             </button>
+                            <!-- <h1 id="error">請確實填入email</h1> -->
                            <!--  <label for="mail" style="-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: block;margin-bottom: 8px; color:white;text-align: center"></label> -->
                         </fieldset>
                     </form>
@@ -349,25 +393,20 @@
 
     <section id="contact" class="contact bg-primary">
         <div class="container">
-            <h2>傘傘<i class="fa fa-heart"></i> 罩著您</h2>
             <ul class="list-inline list-social">
-                <!--<li class="social-twitter">
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                </li>-->
+                <li><h2>傘傘<i class="fa fa-heart"></i> 罩著您</h2>
+                </li>
                 <li class="social-facebook">
-                    <a href="https://www.facebook.com/umbrellataipei/"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="social-google-plus">
-                    <a href="http://www.google.com"><i class="fa fa-google-plus"></i></a>
-                </li>
+                    <a href="https://www.facebook.com/umbrellataipei/"><i class="fa fa-facebook"></i></a> 
+                </li>                           
             </ul>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2017 傘傘愛正式上線. All Rights Reserved.</p>
-            <ul class="list-inline">
+            <p>&copy; 2017 傘傘愛即將上線. All Rights Reserved.</p>
+            <!-- <ul class="list-inline">
                 <li>
                     <a href="#">Privacy</a>
                 </li>
@@ -377,7 +416,7 @@
                 <li>
                     <a href="#">FAQ</a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </footer>
 </body>
@@ -386,18 +425,18 @@
 
 <style type="text/css">
     /*=============e-mail ================*/
-    section#cta div.email-input {
+    /*section#cta div.email-input , header div.email-input {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         max-width: 300px;
         margin: 10px 0;
         padding: 12px 0;
-        /*background: #F5F5F5;*/
+        background: #F5F5F5;
         border-radius: 8px;
     }
 
-    section#cta input{
+    section#cta input , header input {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -416,7 +455,7 @@
         margin-bottom: 30px; 
         display:block;
     }
-    section#cta h1{
+    section#cta h1, header .header-content .email-input h1 {
         color: white; 
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -452,153 +491,181 @@
     .signupButton:active {
         position:relative;
         top:1px;
-    }
+    }*/
+    /*button.signupButton{
+        border-radius: 5px;
+        width: 100%;
+        border: 1px solid #44c767;
+        background-color:#3ac162;
+        border-width: 1px 1px 3px;
+        overflow: visible;
+        margin-bottom: 20px;
+        text-transform: none;
+        cursor: pointer;
+    }*/
+    
     /*=============自行修改================*/
 
-    .header-content{
-        color: beige;
-    }
-    div.clearfix{
-        clear: both;
-    }
-    section.features{
+   /* .header-content{
+        color: orange;
+    }*/
+    
+    /*section.features{
         padding: 100px 0 0 0 ;
-    }
-
+    }*/
+    /*.bg-primary{
+        background: #88CED7 ;
+    }*/
+    /*div#video{
+        margin-bottom: 150px;
+        margin-top: 50%;
+        transform: translateY(-50%);
+    }*/
+    /*section.features .section-heading h2{
+        font-size: 2.778rem;
+    }*/
     /*=============RWD===============*/
     /*  px與em切換: http://pxtoem.com/ */
     @media (min-width: 1200px){
         /*傘傘愛-公共連署提案*/
-        section#download h2{
+        /*section#download h2{
             font-size: 75px;
-        }
+        }*/
         
         /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
-        section#download p{
+        /*section#download p{
             font-size: 18px;
-        }
+        }*/
     }
     @media (min-width: 992px){
-        /*iphone6內 影片位置*/
-    div#video{
-        margin-bottom: 150px;
-        margin-top: 50%;
-        transform: translateY(-50%);
+
+        /*section#features div.video_holder{
+            position: relative;
         }
-    section#features div.video_holder{
-        position: relative;
-        }
+        h2#single-column{
+            display: none;
+        }*/
     }
     @media (max-width: 991px){
         /*iphone6內 影片位置*/
-        div#video{
-            margin-bottom: 100px;
-        }
-        section#features div.video_holder{
+       /* section#features div.video_holder{
             position: relative;
         }
+        section#features div.video_description{
+            display: none;
+        }
+        h2#multi-columns{
+            display: none;
+        }
+        p {
+            font-size: 1em;
+        }*/
     }
     @media (min-width: 768px){
     /*header字的顏色*/
-        p#mobile{
+        /*p#mobile{
             display: none;
         }
         h3#mobile{
             display: none;
-        }
+        }*/
         /*傘傘愛-公共連署提案*/
-        section.download h2{
+        /*section.download h2{
             font-size: 65px;
         }
         
-        /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
+        我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......
         section.download p{
             font-size: 16px;
-        }
+        }*/
+        
     }
     @media (max-width: 767px){
        
-        p#web{
-            display: none;
-        }
-        h3#web{
+        /*p#web, h3#web{
             display: none;
         }
         section.features .feature-item {
             text-align: center;
         }
+        section#cta div.email-input, section#cta h3#mobile, div.header-content div.email-input{
+            margin: 0 auto;
+        }
+        section.features .section-heading h2{
+            font-size: 3em;
+        }
         /*傘傘愛 -公共雨傘租借系統。*/
-        header .header-content .header-content-inner h1{
+        /*header .header-content .header-content-inner h1{
             font-size: 32px;
-        }
+        }*/
         /*我們是雨傘界的Ubike，讓你雨天也能有把傘。簡易申請，輕鬆租借，每次只要5元！*/
-        .header-content-inner p{
+        /*.header-content-inner p{
             display: none;
-        }
+        }*/
         
         /*想知道更多傘傘愛*/
-        .header-content-inner a{
+        /*.header-content-inner a{
             font-size: ;
-        }
+        }*/
         /*不穩定的氣候你濕透了嗎？ 不用擔心，有了傘傘愛你不再成為落湯雞！*/
-        .header-content-inner h2.section-heading{
+        /*.header-content-inner h2.section-heading{
            font-size: 16px; 
-        }
+        }*/
         /*申請簡單，租借方便，而且每次只要5元！*/
-        .section-heading h2{
+        /*.section-heading h2{
            font-size: 32px; 
-        }
+        }*/
         /*現在開始免費下載，我們提供最簡易的方式，讓你不再濕搭搭。*/
-        .section-heading p.text-muted{
-           font-size: ; 
-        }
+        /*.section-heading p.text-muted{
+           font-size: 1.4em; 
+        }*/
 
         /*調icon大小*/
-        section.features .feature-item i{
+        /*section.features .feature-item i{
             font-size: ;   
-        }
+        }*/
         /*簡易申請*/
-        section.features .feature-item h3 {
+        /*section.features .feature-item h3 {
             font-size: ; 
             margin-top: 20px; 
             margin-bottom: 10px; 
 
-        }
+        }*/
         /*只要手機或是E-mail，即可以馬上申請加入*/
-        section.features .feature-item p {
+        /*section.features .feature-item p {
             font-size: ;   
-        }
+        }*/
         /*傘傘愛-公共連署提案*/
-        section.download h2{
+        /*section.download h2{
             font-size: 32px;
-        }
+        }*/
         /*我們提供任何需要的人，簡單的借到一把能夠遮陽避雨的傘，......*/
-        section.download p{
+        /*section.download p{
             font-size: ;
             text-align: left;
-        }
+        }*/
         /*忘記帶傘了嗎？......*/
-        section.cta .cta-content h3{
+        /*section.cta .cta-content h3{
             font-size: 28px;
-        }
+        }*/
         /*立即申請...3次免費*/
-        .signupButton{
+        /*.signupButton{
             font-size: ;
-        }
+        }*/
         /*傘傘愛 罩著您*/
-        section h2 {
+        /*section h2 {
             font-size: ;
-        }                
+        }*/                
         /*facebook & google+*/
-        section.contact ul.list-social li a {
-            /*width: 80px;
+        /*section.contact ul.list-social li a {
+            width: 80px;
             height: 80px;
-            line-height:80px;*/
-        }
+            line-height:80px;
+        }*/
 
-        section.contact ul.list-social li a i{
-            /*font-size: 40px;*/
-        }
+        /*section.contact ul.list-social li a i{
+            font-size: 40px;
+        }*/
     }
 </style>
 
