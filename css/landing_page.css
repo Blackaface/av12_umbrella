@@ -623,6 +623,9 @@ img::-moz-selection {
     section.contact ul.list-social li a i{
         /*font-size: 40px;*/
     }
+    section#cta h3{
+        text-align: center;
+    }
 }
 @media (max-width: 450px){
     section.features .section-heading h2{
@@ -630,9 +633,6 @@ img::-moz-selection {
     }
     .section-heading p.text-muted {
         font-size: 4vw;
-    }
-    section#cta h3, section.contact h3{
-        text-align: center;
     }
     section.contact h2, section.cta .cta-content h2{
         font-size: 30px;
